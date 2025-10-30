@@ -251,15 +251,28 @@ This shows where the repo came from (the GitHub URL).
 
 ---
 
-## 🌿 Section 4 – Branching and Committing
+## 🌿 Section 4 – Feature Branches
 
-### What Is a Branch?
-A **branch** is like a parallel timeline. You can make changes without affecting the main codebase.
+### What Is a Feature Branch?
+A **feature branch** is a separate branch where you develop a specific feature or change without affecting the main codebase.
 
-### Why Branch?
-- Experiment without breaking things
-- Work on features independently
-- Collaborate without stepping on toes
+### Why Feature Branches?
+- **Keep main stable** – Production code is always safe
+- **Experiment freely** – Break things without consequences
+- **Work independently** – Multiple people can work in parallel
+- **Easy code review** – Changes are isolated and reviewable
+- **Industry standard** – This is how professional teams work
+
+### The Feature Branch Workflow:
+```
+1. Create a branch from main
+2. Work on your feature
+3. Commit your changes
+4. Push to GitHub
+5. Open a Pull Request
+6. Get reviewed
+7. Merge back to main
+```
 
 ---
 
@@ -677,39 +690,80 @@ Text should be white or high contrast.
 
 ---
 
+### 💻 Workshop Exercise: Create Your Own Issue
+
+**For this workshop, create an issue to add your info:**
+
+**Title:**
+```
+Add [Your Major] to participant info
+```
+
+**Description:**
+```markdown
+## What
+Add my major and year to the `practice/locations.txt` file.
+
+## Why
+Workshop exercise to practice issue workflow.
+
+## Acceptance Criteria
+- [ ] Major and year added to locations.txt
+- [ ] PR references this issue
+- [ ] Follows format: "Major, Year"
+```
+
+**Labels:** `enhancement`, `good first issue`
+**Assign:** Yourself
+
+**Click "Submit new issue"** and note the issue number (e.g., #15)
+
+---
+
 ### 💻 Working on an Issue
 
-**Claim an issue:**
-1. Find an issue you want to work on
-2. Comment: "I'll take this!"
-3. Assign yourself
+**You created issue #15 (or whatever number you got). Now let's fix it!**
 
 **Create a branch for it:**
 ```bash
 git checkout main
 git pull origin main
-git checkout -b fix-button-color
+git checkout -b feature/add-info-15
 ```
 
-**Make your changes, commit, push:**
+**Open `practice/locations.txt` and add your info:**
+```
+Computing Science, 3rd Year
+```
+(Use your actual major and year!)
+
+**Commit with reference to the issue:**
 ```bash
-git add .
-git commit -m "fix: improve button color contrast"
-git push -u origin fix-button-color
+git add practice/locations.txt
+git commit -m "feat: add major and year to participant info
+
+Adds my major and year to the participant info file.
+
+Relates to #15"
 ```
 
-**Open a PR that references the issue:**
-
-In your PR description:
+**Push and create PR:**
+```bash
+git push -u origin feature/add-info-15
 ```
-Fixes #42
 
+**On GitHub, create PR with:**
+```markdown
 ## Changes
-- Changed button text to white
-- Added hover effect
+- Added my major and year to locations.txt
+
+## Testing
+- Verified format is correct (Major, Year)
+
+Fixes #15
 ```
 
-**When the PR merges, issue #42 closes automatically!**
+**When the PR merges, issue #15 closes automatically!** ✨
 
 ---
 
