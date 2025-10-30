@@ -5,6 +5,7 @@
 ---
 
 ## 🧭 Section 1 – Welcome & Setup
+Task 1: Setup & Configuration (`tasks/01-setup.md`)
 
 ### What We're Doing
 Before we jump into Git magic, we need to make sure:
@@ -80,6 +81,7 @@ Every commit you make gets tagged with your name and email.
 ---
 
 ## 🧱 Section 2 – Git's Mental Model
+Next hands-on: Task 2 – Your First Commit (`tasks/02-first-commit.md`)
 
 ### The Three Areas of Git
 
@@ -192,6 +194,7 @@ hello.txt   ──┬──→ hello.txt  ──┬──→ [Commit 1]
 ---
 
 ## 🌍 Section 3 – Cloning and Exploring
+Reference section (no task) – prepares you for Task 3
 
 ### What Is Cloning?
 **Cloning** means downloading a complete copy of a repository from GitHub (or anywhere) to your computer.
@@ -252,6 +255,7 @@ This shows where the repo came from (the GitHub URL).
 ---
 
 ## 🌿 Section 4 – Feature Branches
+Task 3: Feature Branches (`tasks/03-feature-branches.md`)
 
 ### What Is a Feature Branch?
 A **feature branch** is a separate branch where you develop a specific feature or change without affecting the main codebase.
@@ -348,6 +352,7 @@ git commit -m "feat: add my name to participants list"
 ---
 
 ## ☁️ Section 5 – Push and Pull
+Task 4: Pushing to GitHub (`tasks/04-pushing.md`)
 
 ### What Is Pushing?
 **Pushing** sends your local commits to GitHub so others can see them.
@@ -413,6 +418,7 @@ Either "Already up to date" or new commits downloading.
 ---
 
 ## ⚔️ Section 6 – Merge Conflicts
+Task 5: Handling Merge Conflicts (`tasks/05-conflicts.md`)
 
 ### 🎭 Live Demo First!
 
@@ -533,6 +539,7 @@ UAIS runs awesome AI workshops!
 ---
 
 ## 🔍 Section 7 – Pull Requests & Code Review
+Task 6: Pull Requests & Code Review (`tasks/06-pull-requests.md`)
 
 ### What's a Pull Request?
 A **Pull Request (PR)** is how teams review code before merging. It's like saying: "Hey team, check out my changes before we add them to main!"
@@ -624,6 +631,7 @@ git push -u origin feature-yourname
 ---
 
 ## 📋 Section 8 – GitHub Issues & Project Management
+Task 7: GitHub Issues & Project Management (`tasks/07-github-issues.md`)
 
 ### What Are GitHub Issues?
 
@@ -805,6 +813,7 @@ Labels organize issues:
 ---
 
 ## 👥 Section 9 – Team Best Practices & Feature Branches
+Task 8: Team Workflow & Best Practices (`tasks/08-team-workflow.md`)
 
 ### 🌿 Feature Branch Workflow
 
