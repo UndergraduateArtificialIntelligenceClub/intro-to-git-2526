@@ -1,0 +1,10 @@
+# Participant Info
+
+Add your major and year as part of the GitHub Issues exercise (Task 7)!
+
+Format: `Major, Year`
+
+---
+
+Computing Science, 3rd Year – Workshop Instructor
+
