@@ -1,6 +1,6 @@
 # 🚀 Git Happens: Learn Git by Breaking Things (and Fixing Them)
 
-**UAIS Hands-On Git Workshop — Winter 2025-26**
+**UAIS Hands-On Git Workshop — Fall 2025-2026**
 
 Welcome! This isn't your typical "watch me code" workshop. You're going to get your hands dirty, make mistakes, break things, and learn how to fix them. Because that's how real development works.
 
@@ -21,62 +21,12 @@ By the end of this workshop, you'll be able to:
 ## 🛠️ Before We Start
 
 ### You'll Need:
-- ✅ **Git** installed (see platform-specific instructions below)
+- ✅ **Git** installed
 - ✅ **VS Code** or any code editor ([get VS Code](https://code.visualstudio.com/))
 - ✅ **GitHub account** ([sign up free](https://github.com/))
 - ✅ **Terminal/Command Prompt** open and ready
 
-### Installing Git
-
-#### 🍎 macOS
-**Option 1: Homebrew (recommended)**
-```bash
-# Install Homebrew first if you don't have it
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Then install Git
-brew install git
-```
-
-**Option 2: Download Installer**
-- Download from [git-scm.com/downloads](https://git-scm.com/downloads)
-- Run the `.pkg` installer
-
-**Option 3: Xcode Command Line Tools**
-```bash
-xcode-select --install
-```
-
-#### 🪟 Windows
-**Option 1: Git for Windows (recommended)**
-- Download from [git-scm.com/download/win](https://git-scm.com/download/win)
-- Run the installer
-- **Important:** During installation, select "Git Bash" and check "Use Git from Git Bash and also from Windows Command Prompt"
-
-**Option 2: winget (Windows 10/11)**
-```powershell
-winget install --id Git.Git -e --source winget
-```
-
-**After installation, restart your terminal!**
-
-#### 🐧 Linux
-**Ubuntu/Debian:**
-```bash
-sudo apt update
-sudo apt install git
-```
-
-**Fedora:**
-```bash
-sudo dnf install git
-```
-
-### Quick Setup Check:
-```bash
-git --version
-```
-If you see a version number (like `git version 2.40.0`), you're good! If not, restart your terminal and try again.
+**Don't have Git yet?** No worries! We'll walk through installation and setup together in [Task 1: Setup & Configuration](tasks/01-setup.md).
 
 ---
 
@@ -115,26 +65,13 @@ How to collaborate without stepping on toes.
 
 ## 🏁 Getting Started
 
-### Step 1: Clone This Repo
-```bash
-git clone https://github.com/UAIS/intro-to-git-2526.git
-cd intro-to-git-2526
-```
+**Start here:** [`WORKSHOP.md`](./WORKSHOP.md) — The full guided workshop experience
 
-### Step 2: Configure Git
-```bash
-git config --global user.name "Your GitHub Username"
-git config --global user.email "youremail@users.noreply.github.com"
-git config --global core.editor "code --wait"
-```
-
-### Step 3: Open in VS Code
-```bash
-code .
-```
-
-### Step 4: Follow Along
-Start with [`WORKSHOP.md`](./WORKSHOP.md) for the full guided experience, or jump into individual tasks in the [`tasks/`](./tasks/) folder.
+**Or jump to specific topics:**
+- [`tasks/01-setup.md`](./tasks/01-setup.md) — Install and configure Git
+- [`tasks/02-first-commit.md`](./tasks/02-first-commit.md) — Your first repo
+- [`tasks/03-feature-branches.md`](./tasks/03-feature-branches.md) — Working with branches
+- ...and more in the [`tasks/`](./tasks/) folder!
 
 ---
 
@@ -143,10 +80,7 @@ Start with [`WORKSHOP.md`](./WORKSHOP.md) for the full guided experience, or jum
 ```
 intro-to-git-2526/
 ├── README.md              ← You are here
-├── WORKSHOP.md            ← Full workshop slides & instructions
-├── INSTRUCTOR-GUIDE.md    ← **START HERE if you're teaching this!**
-├── INSTRUCTOR-DEMO.md     ← Live demo script (detailed)
-├── DEMO-QUICK-REF.md      ← Quick reference for demo (print this!)
+├── WORKSHOP.md            ← Full workshop guide
 ├── CHEATSHEET.md          ← Quick reference for Git commands
 ├── tasks/                 ← Individual exercises
 │   ├── 01-setup.md
@@ -161,7 +95,7 @@ intro-to-git-2526/
 │   ├── participants.txt
 │   ├── conflict-demo.txt
 │   ├── demo-conflict.md   
-│   └── locations.txt      ← Add major/year (issues exercise)
+│   └── locations.txt
 └── diagrams/              ← Visual guides
     ├── git-workflow.md
     ├── branch-merge.md
@@ -190,11 +124,34 @@ Type `:q` and hit Enter. Next time, set VS Code as your editor (we did this in s
 
 ---
 
-## 🎓 After the Workshop
+## 🎓 Resources & Next Steps
 
-- Practice by contributing to open-source projects
-- Check out [GitHub Skills](https://skills.github.com/) for more interactive tutorials
-- Build your own projects and use Git from day one
+### 📚 Learn More
+
+**Interactive Tutorials:**
+- [GitHub Skills](https://skills.github.com/) — Official GitHub interactive courses
+- [Learn Git Branching](https://learngitbranching.js.org/) — Visual, interactive Git tutorial
+- [Git Immersion](https://gitimmersion.com/) — Guided tour through Git fundamentals
+
+**Documentation:**
+- [Pro Git Book](https://git-scm.com/book/en/v2) — The complete Git guide (free online)
+- [GitHub Docs](https://docs.github.com/) — Official GitHub documentation
+- [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf) — Quick reference (PDF)
+
+**Videos:**
+- [Git & GitHub for Beginners (Traversy Media)](https://www.youtube.com/watch?v=RGOj5yH7evk) — Excellent 1-hour crash course
+- [Git for Professionals (freeCodeCamp)](https://www.youtube.com/watch?v=Uszj_k0DGsg) — Deep dive into advanced concepts
+
+**Practice:**
+- [First Contributions](https://github.com/firstcontributions/first-contributions) — Make your first open source contribution
+- [Contribute to Open Source](https://github.com/danthareja/contribute-to-open-source) — Practice the GitHub workflow
+
+### 🚀 Next Steps
+
+1. **Use Git for every project** — Even solo projects benefit from version control
+2. **Contribute to open source** — Find projects on GitHub labeled "good first issue"
+3. **Join UAIS Discord** — Ask questions, share projects, collaborate with peers
+4. **Keep the cheat sheet handy** — [`CHEATSHEET.md`](./CHEATSHEET.md) in this repo
 
 ---
 
