@@ -134,6 +134,8 @@ Type `:q` and hit Enter. Next time, set VS Code as your editor (we did this in s
 - [Git Immersion](https://gitimmersion.com/) — Guided tour through Git fundamentals
 
 **Documentation:**
+- [Beej Git Intro](https://beej.us/guide/bggit/)
+- [Beej Git Intro HTML](https://beej.us/guide/bggit/html/split/)
 - [Pro Git Book](https://git-scm.com/book/en/v2) — The complete Git guide (free online)
 - [GitHub Docs](https://docs.github.com/) — Official GitHub documentation
 - [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf) — Quick reference (PDF)
