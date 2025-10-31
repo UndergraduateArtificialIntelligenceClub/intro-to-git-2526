@@ -1,6 +1,8 @@
-# Task 5: Handling Merge Conflicts
+# Task 5: Understanding Merge Conflicts
 
-**Goal:** Face a merge conflict and live to tell the tale.
+**Goal:** Learn how merge conflicts work by watching the instructors demonstrate them live.
+
+**Note:** This is a **demo-only task**. You'll watch the instructors create and resolve a conflict. Understanding conflicts is important, but we won't have everyone create them (that would get chaotic!).
 
 ---
 
@@ -33,118 +35,129 @@ UAIS runs awesome AI workshops!
 
 ---
 
-## 📝 Instructions
+## 📺 What You'll See (Demo for the sake of time)
 
-### Step 1: Create a Conflict (On Purpose!)
+### The Setup
+We'll demi this! 
 
-**Everyone do this:**
+**Hamidat:**
+1. Creates a branch
+2. Edits line 5 in `practice/demo-conflict.md`
+3. Commits and pushes
+4. Opens a PR and merges it ✅
 
-1. Open `practice/conflict-demo.txt`
-2. Find line 3 (it should say something like "Edit this line!")
-3. **Change it to something unique** (e.g., "Git is amazing!")
-4. Save the file
+**Aarush:**
+1. Also creates a branch (from the same starting point)
+2. Edits the **same line 5** differently
+3. Commits and pushes
+4. Tries to merge → **CONFLICT!** 💥
 
----
-
-### Step 2: Commit Your Change
-
-```bash
-git add practice/conflict-demo.txt
-git commit -m "feat: update conflict demo line"
-```
-
----
-
-### Step 3: Try to Merge
-
-**Switch to main:**
-```bash
-git checkout main
-```
-
-**Try to merge your branch:**
-```bash
-git merge feature-yourname
-```
-
-**What happens:**
-- **If you're the first person:** Merge succeeds! ✅
-- **If someone else merged first:** **CONFLICT!** 💥
+**Watch what happens!**
 
 ---
 
-### Step 4: Resolve the Conflict
+## 🔍 What the Conflict Looks Like
 
-**If you got a conflict, Git will say:**
+**When Instructor 2 tries to merge, Git will say:**
 ```
-CONFLICT (content): Merge conflict in practice/conflict-demo.txt
+CONFLICT (content): Merge conflict in practice/demo-conflict.md
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-**Open `practice/conflict-demo.txt` in VS Code.**
-
-You'll see:
 ```diff
 <<<<<<< HEAD
-UAIS rocks at AI events!
+Learning Git with UAIS is awesome!
 =======
-Git is amazing!
->>>>>>> feature-yourname
+Git is an essential tool for modern development!
+>>>>>>> main
 ```
+
+**The conflict markers explained:**
+- `<<<<<<< HEAD` = Instructor 2's version (current branch)
+- `=======` = separator
+- `>>>>>>> main` = Instructor 1's version (already in main)
 
 ---
 
-### Step 5: Pick a Version
+## 🛠️ How to Resolve Conflicts
 
-**You have 3 options:**
+### Option 1: Keep One Version
+Delete the other version and all the markers.
 
-1. **Keep your version** (delete the other lines and the markers)
-2. **Keep their version** (delete your lines and the markers)
-3. **Combine both** (write a new line that includes both ideas)
+### Option 2: Keep Both
+Combine ideas from both versions.
 
-**Example resolution:**
+### Option 3: Write Something New
+Create a brand new line that's better than both.
+
 ```
-UAIS rocks at AI events and runs awesome workshops!
+Learning Git with UAIS is awesome! Git is an essential tool for modern development!
 ```
 
-**Delete all the markers (`<<<<<<<`, `=======`, `>>>>>>>`)**
+**Delete all the markers** (`<<<<<<<`, `=======`, `>>>>>>>`)
 
 ---
 
-### Step 6: Mark as Resolved
+## ✅ Finishing the Resolution
 
-**Stage the fixed file:**
+**Watch as the instructor:**
+
+1. **Saves the file** (conflict is resolved)
+
+2. **Stages it:**
 ```bash
-git add practice/conflict-demo.txt
+git add practice/demo-conflict.md
 ```
 
-**Commit the merge:**
+3. **Commits the merge:**
 ```bash
-git commit -m "fix: resolve conflict in conflict-demo.txt"
+git commit -m "fix: resolve conflict in demo file"
 ```
 
-**Note:** Use `fix:` for conflict resolutions since you're fixing a merge issue.
+4. **Pushes:**
+```bash
+git push
+```
 
-**Done!** Conflict resolved.
+5. **The PR now shows:** ✅ No conflicts, ready to merge!
+
+**That's it!** Conflict resolved and both instructors' ideas are in the code.
 
 ---
 
-## 🎯 Success Criteria
+## 🎯 What You Should Understand
 
-- [ ] Created a conflict by editing the same line as someone else
-- [ ] Saw the conflict markers in the file
-- [ ] Resolved the conflict by editing the file
-- [ ] Staged and committed the resolution
+After watching the demo, you should understand:
+
+- [ ] What causes a merge conflict (two people editing the same line)
+- [ ] What the conflict markers mean (`<<<<<<<`, `=======`, `>>>>>>>`)
+- [ ] That conflicts require a human decision (Git can't guess)
+- [ ] The steps to resolve: edit file → stage → commit
+- [ ] That conflicts are normal and fixable
 
 ---
 
 ## 💡 Key Takeaways
 
-- Conflicts are normal! Don't panic.
-- Git shows you **exactly** where the conflict is
-- **You** decide which version to keep
-- Always stage (`git add`) after fixing
-- Read the error messages — Git tells you what to do
+- **Conflicts are normal** – They happen on every team
+- **Don't panic** – Git shows you exactly what and where
+- **Communication helps** – Talk to the person you conflicted with
+- **You decide** – Git can't guess which version is right
+- **Read the markers** – They tell you what each version is
+- **Always test after** – Make sure your resolution works
+
+---
+
+## 🙋 When You'll Actually Do This
+
+In real development:
+- You'll pull `main` and get a conflict
+- You'll open the file, see the markers
+- You'll decide what to keep (often by talking to your teammate)
+- You'll test that your resolution works
+- You'll commit and push
+
+**For now:** Just understanding how they work is enough. You'll handle conflicts naturally when collaborating on real projects!
 
 ---
 
@@ -166,5 +179,5 @@ Resets the merge state.
 
 ## ➡️ Next Step
 
-Conflicts conquered! Now learn how to save work without committing: [Task 6: Stashing](./06-stash.md)
+Conflicts conquered! Now let's learn how teams review code: [Task 6: Pull Requests](./06-pull-requests.md)
 
