@@ -142,5 +142,5 @@ You'll see your commit with:
 
 ## ➡️ Next Step
 
-Now that you understand the basics, let's clone a real repo: [Task 3: Branching](./03-branching.md)
+Now that you understand the basics, let's clone a real repo: [Task 3: Feature Branches](./03-feature-branches.md)
 
