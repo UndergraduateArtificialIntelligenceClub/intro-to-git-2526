@@ -15,6 +15,43 @@ A **Pull Request (PR)** is a request to merge your branch into main. It's where:
 
 ---
 
+## 🏢 Why This Workflow Exists
+
+**Why can't we just push directly to `main`?**
+
+In professional teams:
+- **`main` is protected** – You physically can't push to it
+- **Code review is required** – At least one person must approve your PR
+- **Tests must pass** – Automated checks run before merge
+- **Main stays stable** – Production code is always deployable
+
+**The typical workflow:**
+1. You fork or clone a repo
+2. Create a feature branch for your change
+3. Make your changes and commit
+4. Push your branch to GitHub
+5. Open a PR to propose merging into main
+6. Maintainers/teammates review your code
+7. You address feedback if needed
+8. Once approved, someone merges it (you or a maintainer)
+9. Your feature branch gets deleted
+
+**Each repo usually has a `CONTRIBUTING.md`** file that explains their specific process, but this is the general pattern everywhere.
+
+**This prevents:**
+- Breaking production code
+- Merging buggy changes
+- Code that hasn't been reviewed
+- Losing track of what changed
+
+**This enables:**
+- Quality control through review
+- Knowledge sharing (others see your code)
+- Discussion and collaboration
+- Safe experimentation
+
+---
+
 ## 🎨 The PR Workflow
 
 ```
@@ -87,6 +124,23 @@ Explain what you changed and why. Use markdown!
 
 ---
 
+### Alternative: Create PR from Command Line
+
+**If you have GitHub CLI installed, you can skip the browser!**
+
+```bash
+gh pr create --title "feat: add my name to participants list" --body "Added my name to participants.txt as part of workshop"
+```
+
+This opens the PR directly from your terminal! Way faster once you get comfortable with it.
+
+**View your PR:**
+```bash
+gh pr view --web
+```
+
+---
+
 ### Step 4: Understand the PR Interface
 
 **Tabs you'll see:**
@@ -115,9 +169,33 @@ Explain what you changed and why. Use markdown!
 
 **Submit your review:**
 1. Click **"Review changes"**
-2. Leave a comment (optional)
-3. Choose **"Approve"**
+2. Write an overall comment (optional but recommended)
+3. **Choose one of three options:**
+
+   **Comment** 💬
+   - Just leaving feedback, no formal approval
+   - Use this when you have questions or suggestions
+   - Doesn't block merging
+
+   **Approve** ✅
+   - You've reviewed and it looks good
+   - You're saying "this is ready to merge"
+   - Often required before merging (depends on repo settings)
+
+   **Request changes** 🔴
+   - Issues need to be fixed before merging
+   - Use this when something's broken or needs improvement
+   - Blocks merging until you approve later
+
 4. Click **"Submit review"**
+
+**For this workshop:** Use **"Approve"** to help your teammates merge!
+
+**Pro tip:** Good reviewers:
+- Point out both good things and issues
+- Explain *why* something should change
+- Are kind and constructive
+- Ask questions instead of demanding changes
 
 ---
 
@@ -163,7 +241,9 @@ Delete branch [Delete branch]
 
 ---
 
-### Step 9: Update Your Local Main
+### Step 9: Clean Up Locally
+
+**Switch back to main and pull the merged changes:**
 
 ```bash
 git checkout main
@@ -171,6 +251,19 @@ git pull origin main
 ```
 
 **You should see your changes now in main!**
+
+**Delete your local branch** (it's merged and no longer needed):
+
+```bash
+git branch -d feature/add-yourname
+```
+
+**Why delete branches?**
+- Keeps your local repo clean
+- Prevents confusion about which branches are active
+- `main` now has all your changes anyway
+
+**Pro tip:** Use `git branch` to see all your branches. Delete merged ones regularly!
 
 ---
 
