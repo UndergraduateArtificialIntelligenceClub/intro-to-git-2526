@@ -22,11 +22,8 @@ Git says: **"I don't know which version to keep. You decide."**
 When there's a conflict, Git marks the file like this:
 
 ```diff
-<<<<<<< HEAD
 UAIS rocks at AI events!
-=======
 UAIS runs awesome AI workshops!
->>>>>>> feature-yourname
 ```
 
 - `<<<<<<< HEAD` = your current branch's version
